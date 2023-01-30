@@ -1,0 +1,13 @@
+services:
+    db:
+      image: mysql
+      container_name: security2-users
+      volumes:
+       - "./.data/db:/var/lib/mysql"
+      environment:
+         MYSQL_ROOT_PASSWORD: root
+         MYSQL_DATABASE: userDB
+         MYSQL_USER: user
+         MYSQL_PASSWORD: test
+         ports:
+            3306:3306
